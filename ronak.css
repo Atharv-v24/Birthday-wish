@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #ff72d7, #5b97ff);
+  text-align: center;
+  overflow: hidden;
+  color: #333;
+}
+pre{
+    color: aqua;
+    font-style: italic;
+}
+#mysterygirl{
+    text-decoration: underline;
+    size: 60;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  padding: 40px 20px;
+}
+
+h1 {
+  font-size: 3em;
+  color: #ff0055;
+  margin-bottom: 10px;
+}
+
+
+.name {
+  color: #e91e63;
+}
+
+.message {
+  font-size: 1.2em;
+  margin-bottom: 40px;
+}
+
+.carousel-container {
+  perspective: 1500px;
+  margin: 0 auto;
+  width: 80%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 2s ease;
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-img {
+  width: 300px;  /* Default size for the images */
+  height: 400px;
+  object-fit: cover;
+  position: absolute;
+  border-radius: 20px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Adjusting size for the 3rd image */
+.carousel-img:nth-child(3) {
+  width: 350px;   /* New size for the 3rd image */
+  height: 450px;
+}
+
+/* Position the images and videos in 3D space */
+.carousel-img:nth-child(1) { transform: rotateY(0deg) translateZ(600px); }
+.carousel-img:nth-child(2) { transform: rotateY(72deg) translateZ(600px); }
+.carousel-img:nth-child(3) { transform: rotateY(144deg) translateZ(600px); }
+.carousel-img:nth-child(4) { transform: rotateY(216deg) translateZ(600px); }
+.carousel-img:nth-child(5) { transform: rotateY(288deg) translateZ(600px); }
+
+/* Adjusting videos */
+.carousel-img.video {
+  width: 300px;
+  height: 400px;
+}
